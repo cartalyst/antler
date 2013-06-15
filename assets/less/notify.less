@@ -1,0 +1,41 @@
+/**
+*
+* Build the foundation for our notify message boxes.
+*
+* @param color 		: hsl, rgb, hex
+*
+*/
+.notifyBase(@color){
+	background:@color;
+	border:2px solid darken(@color, 10%);
+	color:darken(@color, 50%);
+}
+
+.notify{
+
+	margin:10px 0;
+	padding:10px;
+
+	border-radius: 3px;
+
+	.notifyBase(#e1f2fa);
+
+	&.warning{
+
+		.notifyBase(#fcebbd);
+
+	}
+
+	&.error{
+
+		.notifyBase(#f5ab9e);
+
+	}
+
+	&.success{
+
+		.notifyBase(#d3eda3);
+
+	}
+
+}
