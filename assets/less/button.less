@@ -1,0 +1,57 @@
+.button, button {
+	display: inline-block;
+	border: none;
+	cursor: pointer;
+	text-align: center;
+	text-decoration: none;
+	outline: none;
+	padding:8px 16px;
+	background:#ccc;
+
+	&.pill {
+		border-radius: 8px;
+	}
+
+	&.small {
+		padding:4px 8px;
+	}
+
+	&.large {
+		padding:16px 32px;
+	}
+
+}
+
+.circle {
+	border-radius: 100px;
+	padding:8px;
+
+	span {
+		display: table-cell;
+		vertical-align: middle;
+		width:80px;
+		height:80px;
+
+	}
+
+	&.small {
+		padding:8px;
+
+		span {
+		width:40px;
+		height:40px;
+		}
+
+	}
+
+	&.large {
+
+		padding:8px;
+
+		span {
+			width:120px;
+			height:120px;
+
+		}
+	}
+}
