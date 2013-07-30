@@ -44,4 +44,53 @@ body {
 	}
 }
 
+// Grid Section
+
+.grid {
+
+	div {
+		padding:8px;
+		margin:4px 0;
+		color:#999;
+		text-align:center;
+	}
+
+	.full {
+		.clearfix();
+
+		div {
+			border:1px solid #ccc;
+			background: #eee;
+			.grid(1,1);
+		}
+	}
+
+	.halfs {
+		.clearfix();
+		div {
+			border:1px solid #ccc;
+			background: #eee;
+			.grid(1, 2);
+		}
+	}
+
+	.thirds {
+		.clearfix();
+		div {
+			border:1px solid #ccc;
+			background: #eee;
+			.grid(1, 3);
+		}
+	}
+
+	.fourths {
+		.clearfix();
+		div {
+			border:1px solid #ccc;
+			background: #eee;
+			.grid(1, 4);
+		}
+	}
+
+}
 
