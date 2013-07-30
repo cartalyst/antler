@@ -1,4 +1,7 @@
-.button, button {
+// Buttons
+
+.button {
+
 	display: inline-block;
 	border: none;
 	cursor: pointer;
@@ -6,52 +9,46 @@
 	text-decoration: none;
 	outline: none;
 	padding:8px 16px;
-	background:#ccc;
+	background:@theme;
 
-	&.pill {
+	border:1px solid @theme-dark;
+	-moz-box-shadow: inset 0 -2px 0 0 @theme-dark;
+	-webkit-box-shadow: inset 0 -2px 0 0 @theme-dark;
+	box-shadow: inset 0 -2px 0 0 @theme-dark;
+
+	//Button types
+	&.button--pill {
 		border-radius: 8px;
 	}
 
-	&.small {
-		padding:4px 8px;
-	}
-
-	&.large {
-		padding:16px 32px;
-	}
-
-}
-
-.circle {
-	border-radius: 100px;
-	padding:8px;
-
-	span {
-		display: table-cell;
-		vertical-align: middle;
-		width:80px;
-		height:80px;
-
-	}
-
-	&.small {
+	&.button--circle {
 		padding:8px;
+		border-radius: 80px;
 
 		span {
-		width:40px;
-		height:40px;
+			display: table-cell;
+			vertical-align: middle;
+			width:60px;
+			height:60px;
 		}
-
 	}
 
-	&.large {
-
-		padding:8px;
+	//Button Sizes
+	&.button--small {
+		font-size:12px;
 
 		span {
-			width:120px;
-			height:120px;
+			width:40px;
+			height:40px;
+		}
+	}
 
+	&.button--large {
+		font-size:20px;
+
+		span {
+			width:80px;
+			height:80px;
 		}
 	}
 }

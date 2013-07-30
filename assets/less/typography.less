@@ -1,7 +1,11 @@
 /* #Typography
 ================================================== */
+a, a:visited { color: @theme-light; text-decoration: underline; outline: 0; }
+a:hover, a:focus { color: @theme-dark; }
+p a, p a:visited { line-height: inherit; }
+
 h1, h2, h3, h4, h5, h6 {
-	color: #181818;
+	color: @theme;
 	font-family: "Georgia", "Times New Roman", serif;
 	font-weight: normal;
 }
