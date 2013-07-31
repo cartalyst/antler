@@ -2,8 +2,9 @@
 
 body {
 	margin:0 16px;
-	background:url(../img/bg-site.png);
+	background:url(img/bg-site.png);
 }
+
 
 
 // Site Layout
@@ -19,25 +20,38 @@ body {
 	.site__brand {
 		padding:16px;
 	}
+
 }
 
 // Grid Section
 
-.layout {
+.example {
+	border:1px solid @base;
+	padding:16px;
+	background: @site;
+}
+
+.example--layout {
+
+	.clearfix();
 
 	div {
 		padding:8px;
 		margin:4px 0;
 		color:#999;
 		text-align:center;
+		border-right:1px solid @site;
+
+		&:last-child {
+			border-right:none;
+		}
 	}
 
 	.full {
 		.clearfix();
 
 		div {
-			border:1px solid @theme-dark;
-			background: #eee;
+			background: @site-dark;
 			.layout(1,1);
 		}
 	}
@@ -45,8 +59,7 @@ body {
 	.halfs {
 		.clearfix();
 		div {
-			border:1px solid @theme-dark;
-			background: #eee;
+			background: @site-dark;
 			.layout(1, 2);
 		}
 	}
@@ -54,8 +67,7 @@ body {
 	.thirds {
 		.clearfix();
 		div {
-			border:1px solid @theme-dark;
-			background: #eee;
+			background: @site-dark;
 			.layout(1, 3);
 		}
 	}
@@ -63,47 +75,39 @@ body {
 	.fourths {
 		.clearfix();
 		div {
-			border:1px solid @theme-dark;
-			background: #eee;
+			background: @site-dark;
 			.layout(1, 4);
 		}
 	}
 
 	.push-1 {
-		border:1px solid @theme-dark;
-		background: #eee;
+		background: @site-dark;
 		.layout(3, 4, push, 1);
 	}
 
 
 	.push-2 {
-		border:1px solid @theme-dark;
-		background: #eee;
+		background: @site-dark;
 		.layout(2, 4, push, 2);
 	}
 
 	.push-3 {
-		border:1px solid @theme-dark;
-		background: #eee;
+		background: @site-dark;
 		.layout(1, 4, push, 3);
 	}
 
 	.center-1 {
-		border:1px solid @theme-dark;
-		background: #eee;
+		background: @site-dark;
 		.layout(1, 4, center);
 	}
 
 
 	.center-2 {
-		border:1px solid @theme-dark;
-		background: #eee;
+		background: @site-dark;
 		.layout(2, 4, center);
 	}
-
 	.center-3 {
-		border:1px solid @theme-dark;
-		background: #eee;
+		background: @site-dark;
 		.layout(3, 4, center);
 	}
 
