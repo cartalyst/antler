@@ -1,0 +1,16 @@
+/* #layout
+================================================== */
+
+.layout(@numerator, @denominator:@denominator, ...) {
+	float: left;
+	width: 100%*(@numerator / @denominator);
+}
+
+.layout(@numerator, @denominator, @type, @value) when (@type = push) {
+	margin-left: 100%*(@value / @denominator);
+}
+
+.layout(@numerator, @denominator, @type) when (@type = center) {
+	margin:0 auto;
+	float:none;
+}

@@ -4,7 +4,7 @@ Monokai style - ported by Luigi Maselli - http://grigio.org
 
 pre code {
   display: block; padding: 0.5em;
-  background: #272822;
+  background: #333;
 }
 
 pre .tag,
@@ -17,7 +17,8 @@ pre .flow,
 pre .lisp .title,
 pre .clojure .built_in,
 pre .nginx .title,
-pre .tex .special {
+pre .tex .special,
+pre .mixin {
   color: #F92672;
 }
 
