@@ -1,0 +1,49 @@
+@import "less/antler.less";
+
+body {
+	background:url(img/bg-site.png);
+}
+
+.site {
+	width:960px;
+	margin:0 auto;
+
+	.site__header {
+		text-align: center;
+	}
+}
+
+.example {
+	width:400px;
+	height:400px;
+	margin:0 auto;
+	background:@palette1;
+
+	.example__sidebar {
+		height:400px;
+		background:@palette2;
+		.layout(1,4);
+	}
+
+	.example__content {
+		height:400px;
+		background: @palette3;
+		.layout(3, 4);
+	}
+}
+
+.gallery {
+	background:@palette4;
+	list-style-type: none;
+
+	.gallery__tile {
+
+		.layout(1, 4);
+		text-align: center;
+
+		span {
+			background:@palette5;
+			padding:10px;
+		}
+	}
+}

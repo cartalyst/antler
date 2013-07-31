@@ -1,16 +1,20 @@
 /* #layout
 ================================================== */
+@print-space:8px;
 
 .layout(@numerator, @denominator:@denominator, ...) {
 	float: left;
 	width: 100%*(@numerator / @denominator);
+	padding:@print-space;
 }
 
 .layout(@numerator, @denominator, @type, @value) when (@type = push) {
 	margin-left: 100%*(@value / @denominator);
+	padding:@print-space;
 }
 
 .layout(@numerator, @denominator, @type) when (@type = center) {
 	margin:0 auto;
 	float:none;
+	padding:@print-space;
 }
