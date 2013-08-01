@@ -1,11 +1,11 @@
 @import "less/antler.less";
 
 body {
-	margin:0 16px;
-	background:url(img/bg-site.png);
+	background:@site;
+	color:#666;
+	font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+    font-weight: 300;
 }
-
-
 
 // Site Layout
 .site {
@@ -25,11 +25,6 @@ body {
 
 // Grid Section
 
-.example {
-	border:1px solid @base;
-	padding:16px;
-	background: @site;
-}
 
 .example--layout {
 
@@ -40,7 +35,7 @@ body {
 		margin:4px 0;
 		color:@white;
 		text-align:center;
-		border-right:1px solid @site;
+		border-right:1px solid @white;
 
 		&:last-child {
 			border-right:none;
@@ -112,3 +107,42 @@ body {
 	}
 
 }
+
+input, .content {
+    display: none;
+    background: @white;
+    line-height: 25px;
+    padding: 5px 25px;
+ 	color:@base;
+    font: normal 1em/150% Sans-Serif;
+    min-width: 200px;
+}
+
+#example:checked ~ .example,
+#html:checked ~ .html,
+#less:checked ~ .less {display: block;}
+
+label {
+    cursor: pointer;
+    background: @palette1;
+    padding: 5px 10px;
+    display: inline-block;
+    text-align: center;
+    color: #fff;
+    font: normal 1em/150% Sans-Serif;
+    margin-right: -3px;
+    transition: background .25s linear;
+}
+
+label:hover, input:checked + label {background: #fff; color:#666;}
+
+h3, p {
+    text-indent: 25px;
+    text-align: justify;
+}
+
+pre code {
+	font-size:12px;
+	color:#666;
+}
+
